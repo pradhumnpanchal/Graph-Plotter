@@ -6,7 +6,7 @@ import java.sql.Statement;
 import java.util.*;
 import java.awt.*;
 public class GraphPlot extends JPanel{
-    static int x = 40 , y = 350;
+    static int x = 140 , y = 300;
     public void paintComponent(Graphics g) {
 
         try{
@@ -16,13 +16,15 @@ public class GraphPlot extends JPanel{
             Statement stmt=con.createStatement();
             ResultSet rs=stmt.executeQuery("SELECT * FROM graph");
             int x1 = 20;
+            g.setColor(Color.BLACK);
+            g.drawLine(20,50,20,300);
             while(rs.next()) {
                 //System.out.print(rs.getInt(1));
                 int val = rs.getInt(1);
                 g.setColor(Color.BLUE);
                 g.drawLine(x1,y,x,350-30*val);
                 x1 = x;
-                x += 60;
+                x += 120;
                 y = 350-30*val;
             }
             con.close();
@@ -36,7 +38,7 @@ public class GraphPlot extends JPanel{
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setResizable(false);
         frame.setBackground(Color.white);
-        frame.setSize(600, 400);
+        frame.setSize(700, 400);
 
         GraphPlot panel = new GraphPlot();
 
