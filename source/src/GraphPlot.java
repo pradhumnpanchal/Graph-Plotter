@@ -18,11 +18,12 @@ public class GraphPlot extends JPanel{
             int x1 = 20;
             while(rs.next()) {
                 //System.out.print(rs.getInt(1));
+                int val = rs.getInt(1);
                 g.setColor(Color.BLUE);
-                g.drawLine(x1,y,x,rs.getInt(1));
+                g.drawLine(x1,y,x,350-30*val);
                 x1 = x;
-                x += 20;
-                y = rs.getInt(1);
+                x += 60;
+                y = 350-30*val;
             }
             con.close();
         }catch(Exception e){ System.out.println(e);}
