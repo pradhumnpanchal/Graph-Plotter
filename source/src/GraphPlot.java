@@ -27,8 +27,9 @@ public class GraphPlot extends JPanel{
         JFrame.setDefaultLookAndFeelDecorated(true);
         JFrame frame = new JFrame("Draw Line");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setResizable(false);
         frame.setBackground(Color.white);
-        frame.setSize(200, 200);
+        frame.setSize(600, 400);
 
         GraphPlot panel = new GraphPlot();
 
