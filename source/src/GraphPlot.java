@@ -17,7 +17,9 @@ public class GraphPlot extends JPanel{
             ResultSet rs=stmt.executeQuery("SELECT * FROM graph");
             int x1 = 20;
             g.setColor(Color.BLACK);
-            g.drawLine(20,50,20,300);
+            g.drawLine(20,30,20,300);
+            g.setColor(Color.BLACK);
+            g.drawLine(20,300,650,300);
             while(rs.next()) {
                 //System.out.print(rs.getInt(1));
                 int val = rs.getInt(1);
