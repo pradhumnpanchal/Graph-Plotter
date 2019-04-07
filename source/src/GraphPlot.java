@@ -20,9 +20,11 @@ public class GraphPlot extends JPanel{
             g.drawLine(20,30,20,300);
             g.setColor(Color.BLACK);
             g.drawLine(20,300,650,300);
+            ArrayList<Integer> Val = new ArrayList<>();
             while(rs.next()) {
                 //System.out.print(rs.getInt(1));
                 int val = rs.getInt(1);
+                Val.add(val);
                 g.setColor(Color.BLUE);
                 g.drawLine(x1,y,x,350-30*val);
                 x1 = x;
