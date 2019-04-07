@@ -36,7 +36,7 @@ public class GraphPlot extends JPanel{
                 g.setColor(Color.BLUE);
                 g.drawLine(x1,y,x,350-30*Val.get(i));
                 x1 = x;
-                x += 120;
+                x += hor_inc;
                 y = 350-30*Val.get(i);
             }
             con.close();
