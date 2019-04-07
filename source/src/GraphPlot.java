@@ -31,6 +31,9 @@ public class GraphPlot extends JPanel{
                 x += 120;
                 y = 350-30*val;
             }
+            for(int i = 0 ; i < Val.size() ; i++){
+
+            }
             con.close();
         }catch(Exception e){ System.out.println(e);}
 
