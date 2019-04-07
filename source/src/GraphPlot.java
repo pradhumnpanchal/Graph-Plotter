@@ -25,14 +25,19 @@ public class GraphPlot extends JPanel{
                 //System.out.print(rs.getInt(1));
                 int val = rs.getInt(1);
                 Val.add(val);
+//                g.setColor(Color.BLUE);
+//                g.drawLine(x1,y,x,350-30*val);
+//                x1 = x;
+//                x += 120;
+//                y = 350-30*val;
+            }
+            int hor_inc = 600/Val.size();
+            for(int i = 0 ; i < Val.size() ; i++){
                 g.setColor(Color.BLUE);
                 g.drawLine(x1,y,x,350-30*val);
                 x1 = x;
                 x += 120;
                 y = 350-30*val;
-            }
-            for(int i = 0 ; i < Val.size() ; i++){
-
             }
             con.close();
         }catch(Exception e){ System.out.println(e);}
