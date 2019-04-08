@@ -22,19 +22,16 @@ public class GraphPlot extends JPanel{
             g.drawLine(20,300,650,300);
             ArrayList<Integer> Val = new ArrayList<>();
             while(rs.next()) {
-                //System.out.print(rs.getInt(1));
                 int val = rs.getInt(1);
                 Val.add(val);
-//                g.setColor(Color.BLUE);
-//                g.drawLine(x1,y,x,350-30*val);
-//                x1 = x;
-//                x += 120;
-//                y = 350-30*val;
             }
             int hor_inc = 600/Val.size();
+            Graphics2D g2 = (Graphics2D) g;
+            g2.setStroke(new BasicStroke(3));
             for(int i = 0 ; i < Val.size() ; i++){
-                g.setColor(Color.BLUE);
-                g.drawLine(x1,y,x,350-30*Val.get(i));
+                g2.setStroke(new BasicStroke(4, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND));
+                g2.setColor(Color.BLUE);
+                g2.drawLine(x1,y,x,350-30*Val.get(i));
                 x1 = x;
                 x += hor_inc;
                 y = 350-30*Val.get(i);
