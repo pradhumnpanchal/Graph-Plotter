@@ -9,7 +9,7 @@ public class GraphPlot extends JPanel{
     static int x = 140 , y = 300;
     public void paintComponent(Graphics g) {
         Graphics2D g2 = (Graphics2D) g;
-        //g2.setStroke(new BasicStroke(2));
+        g2.setStroke(new BasicStroke(2));
         try{
             Class.forName("com.mysql.jdbc.Driver");
             Connection con= DriverManager.getConnection(
