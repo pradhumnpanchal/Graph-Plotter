@@ -6,7 +6,7 @@ import java.sql.Statement;
 import java.util.*;
 import java.awt.*;
 public class GraphPlot extends JPanel{
-    static int x = 140 , y = 300;
+    static int x = 0 , y = 300;
     public void paintComponent(Graphics g) {
         Graphics2D g2 = (Graphics2D) g;
         g2.setStroke(new BasicStroke(2));
@@ -27,11 +27,17 @@ public class GraphPlot extends JPanel{
                 Val.add(val);
             }
             int hor_inc = 600/Val.size();
+            //x = hor_inc;
 
             g2.setStroke(new BasicStroke(3));
             for(int i = 0 ; i < Val.size() ; i++){
                 g2.setStroke(new BasicStroke(4, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND));
-                g2.setColor(Color.ORANGE);
+                if(Val.get(i)<=3)
+                    g2.setColor(Color.GREEN);
+                else if(Val.get(i)<8&&Val.get(i)>3)
+                    g2.setColor(Color.ORANGE);
+                else
+                    g2.setColor(Color.RED);
                 g2.drawLine(x1,y,x,350-30*Val.get(i));
                 x1 = x;
                 x += hor_inc;
