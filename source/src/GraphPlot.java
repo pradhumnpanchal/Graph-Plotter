@@ -32,11 +32,11 @@ public class GraphPlot extends JPanel{
             g2.setStroke(new BasicStroke(3));
             for(int i = 0 ; i < Val.size() ; i++){
                 g2.setStroke(new BasicStroke(4, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND));
-//                if(Val.get(i)<=3)
-//                    g2.setColor(Color.GREEN);
-//                else if(Val.get(i)<8&&Val.get(i)>3)
-//                    g2.setColor(Color.ORANGE);
-//                else
+                if(Val.get(i)<=3)
+                    g2.setColor(Color.GREEN);
+                else if(Val.get(i)<8&&Val.get(i)>3)
+                    g2.setColor(Color.ORANGE);
+                else
                     g2.setColor(Color.RED);
                 g2.drawLine(x1,y,x,350-30*Val.get(i));
                 x1 = x;
