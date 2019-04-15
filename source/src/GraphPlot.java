@@ -27,7 +27,7 @@ public class GraphPlot extends JPanel{
                 Val.add(val);
             }
             int hor_inc = 600/Val.size();
-            //x = hor_inc;
+            x = hor_inc;
 
             g2.setStroke(new BasicStroke(3));
             for(int i = 0 ; i < Val.size() ; i++){
