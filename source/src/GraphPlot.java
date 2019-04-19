@@ -5,6 +5,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.*;
 import java.awt.*;
+
 public class GraphPlot extends JPanel{
     static int x = 0 , y = 300;
     public void paintComponent(Graphics g) {
