@@ -49,7 +49,6 @@ public class GraphPlot extends JPanel{
             g.drawLine(20,300,650,300);
 
             con.close();
-
         }catch(Exception e){ System.out.println(e);}
 
     }
