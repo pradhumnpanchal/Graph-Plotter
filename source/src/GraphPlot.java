@@ -18,10 +18,7 @@ public class GraphPlot extends JPanel{
             Statement stmt=con.createStatement();
             ResultSet rs=stmt.executeQuery("SELECT * FROM graph");
             int x1 = 20;
-            g.setColor(Color.BLACK);
-            g.drawLine(20,30,20,300);
-            g.setColor(Color.BLACK);
-            g.drawLine(20,300,650,300);
+
             ArrayList<Integer> Val = new ArrayList<>();
             while(rs.next()) {
                 int val = rs.getInt(1);
@@ -46,7 +43,12 @@ public class GraphPlot extends JPanel{
                 x += hor_inc;
                 y = 350-30*Val.get(i);
             }
+            g.setColor(Color.BLACK);
+            g.drawLine(20,30,20,300);
+            g.setColor(Color.BLACK);
+            g.drawLine(20,300,650,300);
             con.close();
+
         }catch(Exception e){ System.out.println(e);}
 
     }
